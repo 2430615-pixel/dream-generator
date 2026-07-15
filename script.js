@@ -211,6 +211,7 @@ function clearLines() {
 function updateScore() {
     document.getElementById('score').innerText = score;
     document.getElementById('lines').innerText = lines;
+    document.getElementById('speed').innerText = (dropInterval / 1000).toFixed(1) + 's';
 }
 
 function hold() {
