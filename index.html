@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="side-panel left-panel">
+            <div class="panel-box hold-box">
+                <h2>HOLD (C)</h2>
+                <canvas id="hold-canvas" width="100" height="100"></canvas>
+            </div>
+            <div class="panel-box score-box">
+                <h2>SCORE</h2>
+                <p id="score">0</p>
+                <h2>LINES</h2>
+                <p id="lines">0</p>
+            </div>
+            <div class="controls-hint">
+                <p>&#8592; &#8594; : Move</p>
+                <p>&#8595; : Soft Drop</p>
+                <p>&#8593; : Rotate</p>
+                <p>Space : Hard Drop</p>
+                <p>P / Esc : Pause</p>
+            </div>
+        </div>
+
+        <div class="board-container">
+            <canvas id="game-canvas" width="300" height="600"></canvas>
+            <div id="pause-overlay" class="overlay hidden">
+                <h1>PAUSED</h1>
+                <p>Press 'P' or 'Esc' to Resume</p>
+            </div>
+            <div id="game-over-overlay" class="overlay hidden">
+                <h1>GAME OVER</h1>
+                <button id="restart-btn">Restart</button>
+            </div>
+        </div>
+
+        <div class="side-panel right-panel">
+            <div class="panel-box next-box">
+                <h2>NEXT</h2>
+                <canvas id="next-canvas" width="100" height="100"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
